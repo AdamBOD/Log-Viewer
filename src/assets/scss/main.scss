@@ -9,12 +9,79 @@ body {
     nav {
         background-color: #7E7E7E;
         padding: 50px;
+        padding-top: 10px;
         padding-bottom: 10px;
+
+        img {
+            width: 175px;
+            height: 175px;
+        }
 
         span {
             color: azure;
             font-weight: 500;
             font-size: 40px;
+            vertical-align: top;
+            line-height: 4.5;
+        }
+    }
+
+    .logTable {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        visibility: hidden;
+
+        &.visible {
+            visibility: visible;
+        }
+
+        tr {
+            &.header {
+                background-color: #7E7E7E !important;
+                
+                th {
+                    color: azure;
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding: 5px;
+
+                    &.message {
+                        text-align: left;
+                    }
+                }
+            }
+
+            .message {
+                width: 90%;
+            }
+
+            .time {
+                width: 10%;
+                text-align: center;
+            }
+
+            &:nth-child(even) {
+                background-color: #FBFBFB;
+            }
+
+            &:nth-child(odd) {
+                background-color: #F5F5F5;
+            }
+
+            td {
+                font-size: 18px;
+                padding: 5px;
+            }
+        }
+    }
+
+    .loadingSpinner {
+        display: none;
+        margin: auto;
+
+        &.visible {
+            display: block;
         }
     }
 }

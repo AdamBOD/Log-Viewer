@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/Log-Viewer",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

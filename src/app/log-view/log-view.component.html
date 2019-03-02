@@ -1,10 +1,12 @@
-<table>
-    <tr>
-      <th>Message</th>
-      <th>Time</th>
-    </tr>
-    <tr *ngFor="let message of logs">
-      <td>{{ message.message }}</td>
-      <td>{{ message.time | date:'medium' }}</td>
-    </tr>
-  </table>
+<table class="logTable" [ngClass]="{'visible': logsLoaded}">
+  <tr class="header">
+    <th class="message">Message</th>
+    <th class="time">Time</th>
+  </tr>
+  <tr *ngFor="let message of logs">
+    <td class="message">{{ message.message }}</td>
+    <td class="time">{{ message.time | date:'medium' }}</td>
+  </tr>
+</table>
+
+<img class="loadingSpinner" src="./assets/images/Loading.svg" [ngClass]="{'visible': !logsLoaded}">
