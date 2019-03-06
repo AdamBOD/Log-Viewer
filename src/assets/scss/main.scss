@@ -89,6 +89,23 @@ body {
     }
 }
 
+@media (max-width: 2000px) {
+    body {
+        .logTable {
+            tr {
+                .message {
+                    width: 85%;
+                }
+    
+                .time {
+                    width: 15%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1024px) {
     body {
         nav {
