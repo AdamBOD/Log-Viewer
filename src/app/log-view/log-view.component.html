@@ -3,7 +3,7 @@
     <th class="message">Message</th>
     <th class="time">Time</th>
   </tr>
-  <tr *ngFor="let message of logs">
+  <tr *ngFor="let message of logs" class="messageRow">
     <td class="message">{{ message.message }}</td>
     <td class="time">{{ message.time | date:'medium' }}</td>
   </tr>
